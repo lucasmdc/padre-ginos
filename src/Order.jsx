@@ -51,44 +51,46 @@ export default function Order() {
           </div>
           <div>
             <label htmlFor="pizza-size">Pizza Size</label>
-            <span>
-              <input
-                type="radio"
-                checked={pizzaSize === "S"}
-                value="S"
-                name="pizza-size"
-                id="pizza-s"
-                onChange={(e) => setPizzaSize(e.target.value)}
-              />
-              <label htmlFor="pizza-s">Small</label>
-            </span>
-            <span>
-              <input
-                type="radio"
-                checked={pizzaSize === "M"}
-                value="M"
-                name="pizza-size"
-                id="pizza-m"
-                onChange={(e) => setPizzaSize(e.target.value)}
-              />
-              <label htmlFor="pizza-m">Medium</label>
-            </span>
-            <span>
-              <input
-                type="radio"
-                checked={pizzaSize === "L"}
-                value="L"
-                name="pizza-size"
-                id="pizza-l"
-                onChange={(e) => setPizzaSize(e.target.value)}
-              />
-              <label htmlFor="pizza-l">Large</label>
-            </span>
+            <div>
+              <span>
+                <input
+                  type="radio"
+                  checked={pizzaSize === "S"}
+                  value="S"
+                  name="pizza-size"
+                  id="pizza-s"
+                  onChange={(e) => setPizzaSize(e.target.value)}
+                />
+                <label htmlFor="pizza-s">Small</label>
+              </span>
+              <span>
+                <input
+                  type="radio"
+                  checked={pizzaSize === "M"}
+                  value="M"
+                  name="pizza-size"
+                  id="pizza-m"
+                  onChange={(e) => setPizzaSize(e.target.value)}
+                />
+                <label htmlFor="pizza-m">Medium</label>
+              </span>
+              <span>
+                <input
+                  type="radio"
+                  checked={pizzaSize === "L"}
+                  value="L"
+                  name="pizza-size"
+                  id="pizza-l"
+                  onChange={(e) => setPizzaSize(e.target.value)}
+                />
+                <label htmlFor="pizza-l">Large</label>
+              </span>
+            </div>
           </div>
           <button type="submit">Add to Cart</button>
         </div>
         {loading ? (
-          <h2>Loading...</h2>
+          <h3>Loading ...</h3>
         ) : (
           <div className="order-pizza">
             <Pizza
