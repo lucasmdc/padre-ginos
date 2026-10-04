@@ -16,8 +16,8 @@ class ErrorBoundary extends Component {
         <div className="error-boundary">
           <h2>Uh oh!</h2>
           <p>
-            There was an error with this page. <Link to="/">Click here</Link>
-            to go back to the home page.
+            There was an error with this page. <Link to="/">Click here</Link> to
+            go back to the home page.
           </p>
         </div>
       );
