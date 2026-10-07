@@ -7,6 +7,10 @@ export default defineWorkspace([
       include: ["**/*node.test.{js,jsx}"],
       name: "happy-dom",
       environment: "happy-dom",
+      coverage: {
+        provider: "happy-dom",
+        reporter: ["text", "json", "html"],
+      },
     },
   },
   {
@@ -15,10 +19,15 @@ export default defineWorkspace([
       setupFiles: ["vitest-browser-react"],
       include: ["**/*.browser.test.{js,jsx}"],
       name: "browser",
+      coverage: {
+        reporter: ["text", "json", "html"],
+      },
       browser: {
         provider: "playwright",
         enabled: true,
         name: "chromium",
+        // Running chromium without GUI works in "v8" (default) and "istanbul"
+        headless: true,
       },
     },
   },
